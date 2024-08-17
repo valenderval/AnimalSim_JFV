@@ -2,7 +2,7 @@
 public class BrownBear extends Animal implements Walkable, Swimmable{
 
 	private String subSpecies;
-	//String [] bbSubspecies = new String [] {"Alaskan","Asiatic", "European", "Grizzly", "Kodiak", "Siberian"};
+	
 	public BrownBear() {
 		this.simID = 0;
 		this.location = new Location(0,0);
@@ -21,10 +21,8 @@ public class BrownBear extends Animal implements Walkable, Swimmable{
 
 	public String getSubSpecies() throws InvalidSubspeciesException{
 		
-		String [] bbSubspecies = new String [] {"Alaskan","Asiatic", "European", "Grizzly", "Kodiak", "Siberian"};
-InvalidSubspeciesException ISSE = new InvalidSubspeciesException("Invalid subspecies.");
-		try {
-			
+		InvalidSubspeciesException ISSE = new InvalidSubspeciesException("Invalid subspecies.");
+		try {	
 		
 		switch(subSpecies){
 			case "Alaskan":

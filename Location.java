@@ -10,7 +10,7 @@ public class Location {
 	}//end empty- constructor
 	
 	public Location(int x, int y) throws InvalidCoordinateException{
-		InvalidCoordinateException IXSCE = new InvalidCoordinateException("coordinates cannot be less than zero.");
+		InvalidCoordinateException IXSCE = new InvalidCoordinateException("Coordinates cannot be less than zero.");
 		
 		this.xCoord = x;
 		this.yCoord = y;
@@ -19,7 +19,8 @@ public class Location {
 			
 			if (xCoord < 0 || yCoord < 0) {
 				this.xCoord = 0;
-	           throw IXSCE;
+				this.yCoord = 0;
+				throw IXSCE;
 	        }
 			else 
 				this.xCoord = xCoord;
@@ -80,13 +81,13 @@ public class Location {
 	
 	 public int[] getCoordinates() {
 		 return new int [] {xCoord , yCoord};
-	 } 
+	 } //end getCoodinates
 
 
 	@Override
 	public String toString() {
 		return "Location [xCoord=" + xCoord + ", yCoord=" + yCoord + "]";
-	}
+	}//end toString
 	
 	
 }//end class

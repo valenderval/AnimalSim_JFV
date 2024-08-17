@@ -49,7 +49,7 @@ public class Goldfinch extends Animal implements Flyable,Walkable {
 	public String toString() {
 		return "Goldfinch [wingSpan=" + wingSpan + ", simID=" + simID + ", location=" + location + ", full=" + full
 				+ ", rested=" + rested + "]";
-	}
+	}//end toString
 
 	public void walk(int direction) {
 	
